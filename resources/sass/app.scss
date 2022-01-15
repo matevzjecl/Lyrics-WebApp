@@ -1,0 +1,212 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html, body {
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  
+}
+#app {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+pre {
+  color: white;
+  font-family: Consolas,monospace
+}
+textarea {
+  position: relative;
+  color: white;
+  resize: none;
+  padding: 15px;
+  height:800px;
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
+  white-space: pre-wrap;
+  margin: 10px auto;
+  resize: vertical;
+  overflow:auto;
+
+}
+.main {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+}
+
+.center_div{
+  margin: 0 auto;
+  width:65%;
+  text-align: center;
+
+}
+
+th {
+    cursor: default;
+
+}
+.th-clickable {
+  margin: 5px;
+    transform: scale(1);
+    transition: transform 300ms linear;
+    overflow: hidden;
+
+}
+
+.th-clickable:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 300ms linear;
+}
+
+
+tr:hover {
+    cursor: pointer;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+
+$size : 3rem;
+$border-width : .3rem;
+$radius : 1rem; /* try 50% */
+$transition : .3s;
+
+$bg : #F6F3E4;
+$green : #4BC35F;
+$red : #C15044;
+
+
+.roundrect {
+  .up { border-radius: 2rem 2rem 0 0; }
+  .down { border-radius: 0 0 2rem 2rem; }
+  [id^=count-] { border-radius: .5rem .5rem; }
+}
+.chev {
+  .up { border-radius: 50% 50% 0 0; }
+  .down { border-radius: 0 0 50% 50%; }
+  [id^=count-] { border-radius: 100%/50%; }
+}
+
+.circle {
+  .up { border-radius: $size $size 0 0; }
+  .down { border-radius: 0 0 $size $size; }
+  [id^=count-] { border-radius: 50%; }
+}
+
+.vote {
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans";
+  position: relative;
+  width: $size;
+  height: $size;
+}
+
+.increment {
+  flex: 1 0 0;
+  text-align: center;
+  opacity: .5;
+  transition: $transition;
+  cursor: pointer;
+  
+  &.up {
+    background: $green;
+    height: 50%;
+    margin-bottom: $border-width/2;
+  }
+  &.down {
+    background: $red;
+    height: 50%;
+  }
+  
+  &:hover {
+    opacity: 1;    
+  }
+}
+.guest {
+  //opacity: .5;
+  transition: none;
+  cursor: default;
+  pointer-events: none;
+
+}
+.guest:hover {
+  opacity: .5;
+
+}
+
+[id^=count-] {
+  position: absolute;
+  top: 0;
+  border-radius: $radius*.1;
+  margin: $size*.25;
+  background: $bg;
+  width: $size*.5;
+  font-size: $size*.25;
+  font-weight: bold;
+  line-height: $size*.5;
+  text-align: center;
+  box-shadow: 0 0 0 $border-width $bg;
+  pointer-events: none;
+  
+  &.upvoted { color: $green; }
+  &.downvoted { color: $red; }
+}
+
+.bump {
+  animation: bump 200ms;
+}
+
+@keyframes bump {
+  30% { transform: scale(1.2); }
+}
+
+* { box-sizing: border-box; }
+
+
+.op {
+  opacity: 1;
+}
+
+
+.sort-by-asc
+{
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 0 3px;
+    background: transparent;
+    border-bottom: solid 7px #343a40 ;
+    border-top-width: 0;
+}
+
+.sort-by-desc
+{
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 0 3px;
+    background: transparent;
+    border-top: solid 7px #343a40 ;
+    border-bottom-width: 0;
+}
+h3 {
+  color: white;
+  margin: 15px 0;
+}
